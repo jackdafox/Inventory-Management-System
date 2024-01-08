@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="jumbotron bg-white">
+  <h1 class="display-1 text-center">{{ inventory }}</h1>
+  <div class="d-flex justify-content-center mt-5">
+      <a class="btn btn-primary mx-1" href="{% url 'dashboard-edit-inventory' pk=inventoryKey %}">Edit Inventory</a>
+      <a class="btn btn-danger mx-1" href="{% url 'dashboard-delete-inventory' pk=inventoryKey %}">Delete Inventory</a>
+  </div>
+</div>
+<div class="d-flex mx-5">
+  <div class="card rounded p-3 bg-light shadow-sm col-2 h-75">
+    <h2 class="my-5 font-weight-bold text-center">Add Product</h1>
+    <form method="POST">
+      {{form | crispy }} {% csrf_token %}
+      <button class="btn btn-success w-100" name="form" type="submit">Add</button>
+    </form>
+  </div>
+  <div class="flex-fill col-12">
+    <table class="table table-bordered shadow-sm rounded">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Category</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in items %}
+        <tr>
+          <th scope="row" class="align-middle">{{ forloop.counter }}</th>
+          <td class="align-middle w-25">{{ item.name }}</td>
+          <td class="align-middle w-25">RM {{ item.price }}</td>
+          <td class="align-middle w-25">{{ item.category }}</td>
+          <td class="align-middle">{{ item.quantity }}</td>
+          <td class="d-flex">
+            <form method="POST">
+              {% csrf_token %}
+              <button class="btn btn-primary mx-1" name="add" type="submit" value="{{item.product_id}}">Add</button>
+            </form>
+            {% if item.quantity == 0 %}
+            <button class="btn btn-primary mx-1" disabled>Sell</button>
+            {% else %}
+            <form method="POST">
+              {% csrf_token %}
+              <button class="btn btn-primary mx-1" name="sell" type="submit" value="{{item.product_id}}">Sell</button>
+            </form>
+            {% endif %}
+            <a class="btn btn-primary mx-1" href="{% url 'dashboard-edit' pk=inventoryKey pk2=item.product_id %}">Edit</a>
+            <a class="btn btn-primary mx-1" href="{% url 'dashboard-delete' pk=inventoryKey pk2=item.product_id %}">Delete</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock content %}
