@@ -5,19 +5,19 @@
 
 `python -m venv venv`
 
-2a. If you are running MACOS, run the following command 
+    2. If you are running MACOS, run the following command 
 
 `source venv/bin/activate`
 
-2b. If you are running WINDOWS, then run the following command 
+    3. If you are running WINDOWS, then run the following command 
 
 `venv/Scripts/Activate.ps1`
 
-3. Next, install the requirements by running 
+4. Next, install the requirements by running 
 
 `pip install -r requirements.txt`
 
-4. Lastly, you can run the program by using the command 
+5. Lastly, you can run the program by using the command 
 
 `python manage.py runserver`
 
