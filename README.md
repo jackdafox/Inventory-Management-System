@@ -3,7 +3,7 @@
 ### How do I run it?
 1. In your terminal, run the following command 
 
-    `python -m venv venv`
+    ``python -m venv venv``
 
 2. If you are running MACOS, run the following command 
 
