@@ -2,7 +2,7 @@
 
 To start, clone this repo into your local repository by clicking the **Green Button** and put it anywhere in your system
 
-![alt text](https://i.imgur.com/8j86bE8.png)\
+![alt text](https://i.imgur.com/8j86bE8.png)
 
 Unzip it and open the directory using **VSCode**
 
