@@ -21,4 +21,8 @@
 
     `python manage.py runserver`
 
-To view the website, look at the address at and type the address in any web browser
+To view the website, look at the address at 
+
+![alt text](https://i.imgur.com/EBOWvnZ.png)
+
+and type the address in any web browser
