@@ -1,5 +1,10 @@
 # Inventory-Management-System
 
+To start, clone this repo into your local repository and put the java files into your netbeans/eclipse projects as shown below
+
+![alt text](https://i.imgur.com/8j86bE8.png)\
+*Figure 1 : Cloning the repo*
+
 ### How do I run it?
 1. In your terminal, run the following command 
 
@@ -24,5 +29,6 @@
 To view the website, look at the address at 
 
 ![alt text](https://i.imgur.com/EBOWvnZ.png)
+*Figure 2 : App address*
 
 and type the address in any web browser
