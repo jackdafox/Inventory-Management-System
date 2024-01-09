@@ -1,9 +1,10 @@
 # Inventory-Management-System
 
-To start, clone this repo into your local repository and put the java files into your netbeans/eclipse projects as shown below
+To start, clone this repo into your local repository by clicking the **Green Button** and put it anywhere in your system
 
 ![alt text](https://i.imgur.com/8j86bE8.png)\
-*Figure 1 : Cloning the repo*
+
+Unzip it and open the directory using **VSCode**
 
 ### How do I run it?
 1. In your terminal, run the following command 
@@ -29,6 +30,5 @@ To start, clone this repo into your local repository and put the java files into
 To view the website, look at the address at 
 
 ![alt text](https://i.imgur.com/EBOWvnZ.png)
-*Figure 2 : App address*
 
 and type the address in any web browser
